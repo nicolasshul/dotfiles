@@ -1,9 +1,12 @@
 -- UI Improvements
 vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.mouse = 'a'
 vim.opt.cursorline = true
 vim.opt.scrolloff = 4 
 vim.opt.laststatus = 3
+vim.opt.wrap = false
+vim.opt.breakindent = true
 
 -- Indentation Defaults
 vim.opt.expandtab = true
@@ -31,7 +34,9 @@ vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 -- System
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard:append('unnamedplus')
 vim.opt.undofile = true
 vim.opt.updatetime = 250
+vim.opt.winborder = 'rounded'
+vim.loader.enable()
 
