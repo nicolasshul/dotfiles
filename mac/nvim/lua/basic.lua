@@ -40,3 +40,7 @@ vim.opt.updatetime = 250
 vim.opt.winborder = 'rounded'
 vim.loader.enable()
 
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevel = 99
+
