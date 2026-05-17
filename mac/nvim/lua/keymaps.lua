@@ -12,7 +12,7 @@ end, { desc = "Toggle expandtab (tabs vs. spaces)" })
 -- Remove highlighting during basic search ('/')
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = "Clear search highlights" })
 
-vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+vim.keymap.set("n", "<leader>d", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
 vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
