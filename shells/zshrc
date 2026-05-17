@@ -1,0 +1,48 @@
+# Homebrew
+
+if [[ -d /opt/homebrew/bin ]]; then
+	export PATH="/opt/homebrew/bin:$PATH"
+fi
+
+if [[ -d /usr/local/bin ]]; then
+	export PATH="/usr/local/bin:$PATH"
+fi
+
+# PATH
+
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+
+# Editor
+
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+# Aliases
+
+alias nv="nvim"
+alias vim="nvim"
+alias ll="ls -lah"
+alias la="ls -la"
+alias l="ls -CF"
+
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+
+alias ..="cd .."
+alias ...="cd ../.."
+
+alias c="clear"
+
+# Prompt
+
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+zstyle ':vcs_info:git:*' formats '(%b)'
+
+setopt PROMPT_SUBST
+PROMPT='%F{green}%n@%m%f:%F{cyan}%~%f %F{blue}${vcs_info_msg_0_}%f %# '
+
