@@ -30,7 +30,17 @@ alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
 alias gp="git push"
-alias gcd="cd $(git rev-parse --show-toplevel)"
+# alias gcd="cd $(git rev-parse --show-toplevel)"
+
+gcd() {
+  local root
+  root="$(git rev-parse --show-toplevel 2>/dev/null)" || {
+    echo "Not inside a git repo"
+    return 1
+  }
+
+  cd "$root"
+}
 
 alias ..="cd .."
 alias ...="cd ../.."
