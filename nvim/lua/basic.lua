@@ -7,6 +7,7 @@ vim.opt.scrolloff = 4
 vim.opt.laststatus = 3
 vim.opt.wrap = false
 vim.opt.breakindent = true
+vim.opt.splitright = true
 
 -- Indentation Defaults
 vim.opt.expandtab = true
