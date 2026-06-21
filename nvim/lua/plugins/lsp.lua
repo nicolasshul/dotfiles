@@ -49,9 +49,23 @@ return {
       }
 
       for _, server in ipairs(servers) do
+
+        local opts = {
+          capabilities = capabilities,
+        }
+
         vim.lsp.config(server, {
           capabilities = capabilities,
         })
+
+        if server == "clangd" then
+          opts.cmd = {
+            "clangd",
+            "--background-index",
+            "--clang-tidy",
+            "--query-driver=/**/xtensa-*-elf-gcc,/**/riscv32-esp-elf-gcc","/**/ccache",
+          }
+        end
 
         vim.lsp.enable(server)
       end
