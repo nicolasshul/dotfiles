@@ -31,7 +31,8 @@ return {
       "vimdoc",
       "xml",
       "yaml",
-      "java"
+      "java",
+      "systemverilog"
     },
   },
 }

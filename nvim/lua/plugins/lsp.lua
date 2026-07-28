@@ -28,6 +28,8 @@ return {
           "bashls",
           "texlab",
           "lua_ls",
+          "arduino_language_server",
+          "verible",
         }
       })
 
@@ -46,6 +48,8 @@ return {
         "bashls",
         "texlab",
         "lua_ls",
+        "arduino_language_server",
+        "verible",
       }
 
       for _, server in ipairs(servers) do
