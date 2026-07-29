@@ -13,6 +13,10 @@ fi
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
+# STM32 Cube Path
+export STM32_PRG_PATH=/Applications/STMicroelectronics/STM32Cube/STM32CubeProgrammer/STM32CubeProgrammer.app/Contents/Resources/bin
+export PATH="$PATH:$STM32_PRG_PATH"
+
 # Editor
 
 export EDITOR="nvim"
@@ -56,4 +60,6 @@ zstyle ':vcs_info:git:*' formats '(%b)'
 
 setopt PROMPT_SUBST
 PROMPT='%F{green}%n@%m%f:%F{cyan}%~%f %F{blue}${vcs_info_msg_0_}%f %# '
+
+
 
